@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoFactory - Fábrica de Chocolate</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff8f0;
+            color: #3b2115;
+        }
+
+        header {
+            background-color: #4b2618;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #f5c16c;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #f5c16c;
+        }
+
+        .banner {
+            height: 450px;
+            background: linear-gradient(
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5)
+            ),
+            url('https://images.unsplash.com/photo-1511381939415-e44015466834')
+            center/cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .banner h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #713c24;
+            margin-bottom: 20px;
+        }
+
+        .produtos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            width: 260px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #0002;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px;
+            color: #713c24;
+        }
+
+        .card p {
+            padding: 0 15px 20px;
+        }
+
+        .historia {
+            background-color: #f0dfca;
+        }
+
+        .contato {
+            background-color: #4b2618;
+            color: white;
+        }
+
+        .contato h2 {
+            color: #f5c16c;
+        }
+
+        footer {
+            background: #2b160e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #b87938;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #8e5427;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .banner h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍫 ChocoFactory</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="banner" id="inicio">
+        <div>
+            <h2>O sabor que transforma momentos!</h2>
+            <p>Produzindo chocolates com qualidade, carinho e tradição.</p>
+            <button onclick="location.href='#produtos'">
+                Conheça nossos chocolates
+            </button>
+        </div>
+    </div>
+
+    <section class="historia" id="sobre">
+        <h2>Sobre nossa fábrica</h2>
+
+        <p>
+            A ChocoFactory é uma fábrica especializada na produção
+            de chocolates deliciosos. Nosso objetivo é oferecer
+            produtos de alta qualidade, utilizando ingredientes
+            selecionados e processos modernos de fabricação.
+        </p>
+
+        <p>
+            Trabalhamos com dedicação para levar alegria,
+            sabor e momentos especiais aos nossos clientes.
+        </p>
+    </section>
+
+    <section id="produtos">
+        <h2>Nossos produtos</h2>
+        <p>Conheça algumas das nossas delícias!</p>
+
+        <div class="produtos">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1548907040-4d42e7c4a8b2"
+                     alt="Chocolate ao leite">
+                <h3>Chocolate ao leite</h3>
+                <p>Chocolate cremoso e delicioso, feito com muito carinho.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511381939415-e44015466834"
+                     alt="Chocolate amargo">
+                <h3>Chocolate amargo</h3>
+                <p>Uma experiência intensa para os amantes de chocolate.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9"
+                     alt="Bombons de chocolate">
+                <h3>Bombons especiais</h3>
+                <p>Bombons recheados com sabores irresistíveis.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="historia">
+        <h2>Como produzimos nossos chocolates?</h2>
+
+        <p>
+            1. Seleção das melhores matérias-primas.<br><br>
+            2. Preparação e mistura dos ingredientes.<br><br>
+            3. Derretimento e temperagem do chocolate.<br><br>
+            4. Moldagem e resfriamento.<br><br>
+            5. Embalagem e distribuição dos produtos.
+        </p>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Entre em contato!</h2>
+        <p>Quer conhecer melhor nossa fábrica?</p>
+        <p>Email: contato@chocofactory.com</p>
+        <p>Telefone: (00) 4002-8922</p>
+
+        <button onclick="alert('Obrigado por visitar a ChocoFactory!')">
+            Fale conosco
+        </button>
+    </section>
+
+    <footer>
+        <p>© 2026 ChocoFactory - Todos os direitos reservados.</p>
+        <p>Feito com ❤️ e muito chocolate!</p>
+    </footer>
+
+</body>
+</html>
